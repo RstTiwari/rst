@@ -1,169 +1,318 @@
+*{
+   margin: 0 ;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
 body{
-   margin: 0 0;
-   background-image: url("bg.jpg");
-   background-size: cover;
+   background-color: rgb(206, 237, 250);
 
+}
+html{
+   scroll-behavior: smooth;
+}
+
+header{
+   margin: 30px 0px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+}
+.logo{
+   margin-left: 20px;
+}
+.group{
+   display: flex;
+   position: relative;
+
+}
+
+.group .navigation{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
   
-  background-repeat: no-repeat;
-  width: 100%;
 
+.group ul li{
+   list-style: none;
+   float: right;
+   padding:  0 20px;
 }
-.navbar{
-   border-bottom: none;
+
+.menuToggel{
+   display:none ;
 }
 
 
-.center{
-   text-align: center;
-   padding: 300px 0;
-   font-family: 'Times New Roman', Times, serif;
+/* Design For Home page*/
+
+.home{
+ 
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: space-between;
+   align-items: inherit;
+   grid-column-gap:-10px;
+   width:100%;
+   z-index: -1;
+}
+.home__item1{
+   margin: 50px 50px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.home__img{
+   margin-top: 0px;
+   margin-right: 0px;
+   background-position: center;
+   z-index: -1;
+  
+}
+.home__info{
+   display: flex;
+   flex-direction: column;
+   align-items: initial;
+   margin: 10px 40px;
+   z-index: -1;
+}
+.home__myname{
    font-size: 50px;
-   color:red;
+   font-family: serif,-apple-system, BlinkMacSystemFont, '
+   Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+   'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: 900;
+   color: rgb(167, 114, 216);
+   margin-bottom: 10px;
+}
+.home__aboutme{
+   font-size: 20px;
+  color: rgb(187, 180, 180);
+
+}
+.home__icons{
+   margin-left: 20px;
+   margin-top: 20px;
+   text-align: left;
+}
+.group ul li a{
+   text-decoration: none;
+
+}
+
+.group ul li a:hover{
+   color: gainsboro;
+   
+  }
+  
+  
+  /*Experience Design*/
+.experience{
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 20px 20px;
+   z-index: -1;
+}
+.experience__intership{
+   font-size: 35px;
+   font-family: serif,-apple-system, BlinkMacSystemFont, '
+   Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+   'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: 900;
+   color: rgb(167, 114, 216);
+   margin-bottom: 10px;
+   z-index: -1;
+
+}
+.internship__image{
+   width: 100%;
+   margin-top: 50px;
+   z-index: -1;
+}
+/* projects scetion*/
+.projects{
+   padding: 20px 20px;
+  
+   display: grid;
+   grid-template-columns: auto auto auto;
+   justify-content: space-evenly;
+   align-items: center;
+   grid-column-gap:15px;
+   grid-row-gap:15px ;
+   z-index: -1;
+}
+/* Quick-zoom Container */
+.projects__item img {
+   transform-origin: 50% 50%;
+  transition: transform 1.5s, filter .2s ease-out;
+  z-index: -1111;
+ }
  
+ /* The Transformation */
+ .projects__item:hover img {
+   transform: scale(1.09);
+   z-index: -1;
+ }
+
+ /* Skill Section Started from here*/
+.skill{
+   display: grid;
+   grid-template-columns: auto  auto auto ;
+   place-content: center;
+   margin-top: 20px;
+}
   
-  
-
+/*contact me section*/
+.contact-me{
+   margin-top: 50px;
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: center;
+   align-items: center;
 }
-.arrow{
-   font-size: medium;
-   color: red;
-}
-
-button:hover{
-   color: yellowgree;
-
-}
-.mywork{
-   margin-top: 55px;
-}
-.projectname{
-   font-size: 30px;
+.btn{
    text-align: center;
-   color: #912;
 }
 
-@media screen and (min-width:900px) {
+.contact-me >.button{
+   text-align: center;
+}
 
-   body{
-      margin: 0 0;
-      background-image: url("bg.jpg");
-   
-     background-size: cover;
-     background-repeat: no-repeat;
-     width: 100%;
-   
+
+
+/* Responsive design */
+
+@media screen and (max-width:950px) {
+
+
+   .group .menuToggel{
+      display:flex;
+        justify-content: center;
+        align-items: center;
+         margin-top: -10px;
+        right:0;
+        font-size:2em;
+        cursor: pointer;
+        margin-right:250;
+        width:30px;
+        height:30px;
+        z-index:999;
+        position: fixed;
+      
    }
-   .navbar{
-      border-bottom: none;
+   .group .navigation{
+      display: none;
    }
-   
-   
-   .center{
-      text-align: center;
-      padding: 450px 0;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 50px;
-      color:black;
+   .menuToggel ion-icon{
+      position: absolute;
+      display: none;
+      --ionicon-stroke-width: 26px;
     
+   
      
+    
+   }
+   .menuToggel.active  ion-icon:nth-child(1){
+      display: none;
+   }
+  
+   .menuToggel.active  ion-icon:nth-child(2){
+      display: block;
+   }
+  
+   .menuToggel ion-icon:nth-child(1){
+      display: block;
+   }
+  
+   .menuToggel ion-icon:nth-child(2){
+      display: none;
+   }
+   .group  .navigation.active{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(206, 237, 250);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      position: fixed;
+      transition: 0.3s ease-in-out;
+
+
+ }
+ .group ul.navigation  li a{
+
+      padding:5px ;
+      display: inline-block;
+      font-size: 1em;
+      margin-top: 25px;
+  }
+  
      
-   
-   }
-   .arrow{
-      font-size: medium;
-      color: red;
-   }
-   
-   button:hover{
-      color: yellowgree;
-   
-   }
-   .mywork{
-      margin-top: 55px;
-   }
-   .projectname{
-      font-size: 30px;
-      text-align: center;
-      color: #912;
-   }
-   
-}
+    
 
-
-@media screen and (max-width:700px) {
-   body{
-      background-image: url("bg2.jpg");
-   }
- 
-   .center{
+ /*home design*/
+ .home{
+    display:grid ;
+    grid-template-columns: 100%;
+    z-index: -1;
+    
+ }
+ .home__myname{
+    font-size:30px;
     text-align: center;
-    padding: 350px 0;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    color:black;
-  
-   
-   
+    z-index: -1;
+ }
+ .home__aboutme{
+    text-align: left;
+    font-size: 20px;
  
+    z-index: -1;
  }
- .det{
-    color: black;
-    font-size: 20px;
+ .about__what__ido{
+    display: flex;
+    flex-direction: column;
  }
- .projectname{
-    font-size: 20px;
+ .home__icons{
     text-align: center;
-    color: #912;
+    z-index: -1;
  }
-  }
- @media screen and (max-width:500px) {
-  body{
-     background-image: url("bg2.jpg");
-     width:100%;
-  }
+ .home__img{
+    text-align: center;
+ }
 
-  .center{
-   text-align: center;
-   padding: 350px 0;
-   font-family: 'Times New Roman', Times, serif;
-   font-size: 30px;
-   color:black;
+ .projects{
+   padding: 20px 20px;
+  
+   display: grid;
+   grid-template-columns: auto;
+   justify-content: space-evenly;
+   align-items: center;
+   grid-column-gap:15px;
+   grid-row-gap:15px ;
+}
+.projects .projects__item  a img{
+   z-index: -1223;
+}
  
-  
-  
-
+.skill{
+   margin-top: 20px;
+   margin-left: 20px;
+   display: grid;
+   grid-template-columns: auto ;
+   place-content: center;
 }
-.det{
-   color: black;
-   font-size: 20px;
-}
-.projectname{
-   font-size: 20px;
-   text-align: center;
-   color:red;
-}
- }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
+ 
 }
