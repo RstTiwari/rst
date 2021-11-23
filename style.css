@@ -148,7 +148,7 @@ header{
    grid-row-gap:15px ;
    z-index: -1;
 }
-/* Quick-zoom Container */
+
 
 
  /* Skill Section Started from here*/
@@ -283,7 +283,7 @@ header{
  }
  .home__icons{
     text-align: center;
-    z-index: -1;
+   
  }
  .social__icons{
     margin-left: 20px;
