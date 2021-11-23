@@ -91,7 +91,7 @@ header{
    margin-bottom: 10px;
 }
 .home__aboutme{
-   font-size: 20px;
+   font-size: 25px;
   color: rgb(187, 180, 180);
 
 }
@@ -284,6 +284,9 @@ header{
  .home__icons{
     text-align: center;
     z-index: -1;
+ }
+ .social__icons{
+    margin-left: 20px;
  }
  .home__img{
     text-align: center;
